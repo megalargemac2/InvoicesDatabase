@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character Encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport Configuration -->
+    <title>Login</title> <!-- Title of the Document -->
+</head>
+<body>
+    <h2>Login</h2> <!-- Heading of the Page -->
+    <form method="POST" action="{{ url_for('login') }}"> <!-- Form to Login -->
+        <label for="username">Username:</label> <!-- Username Field -->
+        <input type="text" id="username" name="username" required> <!-- Input Field for Username -->
+        <br>
+        <label for="password">Password:</label> <!-- Password Field -->
+        <input type="password" id="password" name="password" requird> <!-- Input Field for Password -->
+        <br>
+        <button type="submit">Login</button> <!-- Button to Login -->
+    </form>
+</body>
+</html>

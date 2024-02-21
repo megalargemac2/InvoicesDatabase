@@ -1,0 +1,30 @@
+<html lang="en"> 
+<head>  
+    <meta charset="UTF-8"> <!-- Character Encoding -->
+    <meta name="viewport" content="width=device.width, inital-sca;e=1.0"> <!-- Viewport Configuration -->
+    <title>{% block title &}Your App{% endblock %}</title> <!-- Title of the Document -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to External Stylesheet -->
+</head> 
+<body> 
+
+<nav> 
+    <!-- Navigation Links / Menu -->
+    <ul> 
+        <li><a href="{{ url_for('index') }}">Home</a></li> <!-- Link to Home Page -->
+        <li><a href="{{ url_for('login') }}">Login</a></li> <!-- Link to Login Page -->
+        <li><a href="{{ url_for('register') }}">Register</a></li> <!-- Link to Register Page -->
+    </ul>
+</nav>
+
+<div class="content">
+    <!-- Content of individual pages inserted here-->
+    {& block content %}{% endblock %}
+</div>
+
+<!-- Footer -->
+
+<!-- Scripts / Links to External Scripts-->
+<script src="{{ url_for('static', filename='script.js') }}"></script> 
+
+</body>
+</html>
